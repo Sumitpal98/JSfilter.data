@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructorfunction</title>
+</head>
+<body>
+    <script>
+        function emp(name,id,salary)
+        {
+            this.name=name;
+            this.id=id;
+            this.salary=salary;
+            this.getDetails=function(){
+                document.write(`name ${this.name} id ${this.id} salary ${this.salary}`)
+            }
+        }
+        var obj1=new emp('sumit',123,12000);
+        var obj2=new emp('amit',4567,10000);
+        var obj3=new emp('Ram',123,67890);
+        obj3.getDetails()
+        </script>
+</body>
+</html>
